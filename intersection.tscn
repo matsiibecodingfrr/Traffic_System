@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cdk0sx6m1cf1h"]
+
+[ext_resource type="Script" uid="uid://s5mn1hd3jlom" path="res://Scripts/Roads/Intersection.gd" id="1_4pmj4"]
+[ext_resource type="PackedScene" uid="uid://6fgj1cdghbhu" path="res://Scenes/Traffic_Lights/traffic_light.tscn" id="2_7vx1u"]
+[ext_resource type="PackedScene" uid="uid://c5p5vsivf8ws4" path="res://Scenes/Cars/Car.tscn" id="3_3m4wh"]
+
+[node name="Intersection" type="Node2D" unique_id=844715326]
+z_index = 2
+script = ExtResource("1_4pmj4")
+testing_mode = null
+car_scene = ExtResource("3_3m4wh")
+
+[node name="StopLines" type="Node2D" parent="." unique_id=1499215091]
+
+[node name="NorthStop" type="Marker2D" parent="StopLines" unique_id=322911603]
+position = Vector2(0, -150)
+
+[node name="SouthStop" type="Marker2D" parent="StopLines" unique_id=163758513]
+position = Vector2(0, 150)
+
+[node name="WestStop" type="Marker2D" parent="StopLines" unique_id=1204239163]
+position = Vector2(-150, 0)
+
+[node name="EastStop" type="Marker2D" parent="StopLines" unique_id=1858032212]
+position = Vector2(150, 0)
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=828493070]
+
+[node name="NorthSpawn" type="Marker2D" parent="SpawnPoints" unique_id=33940557]
+position = Vector2(0, -800)
+
+[node name="SouthSpawn" type="Marker2D" parent="SpawnPoints" unique_id=210773555]
+position = Vector2(0, 800)
+
+[node name="WestSpawn" type="Marker2D" parent="SpawnPoints" unique_id=1303994824]
+position = Vector2(-800, 0)
+
+[node name="EastSpawn" type="Marker2D" parent="SpawnPoints" unique_id=1309456429]
+position = Vector2(800, 0)
+
+[node name="TrafficLights" type="Node2D" parent="." unique_id=1495481870]
+z_index = 2
+
+[node name="NorthLight" parent="TrafficLights" unique_id=1311438655 instance=ExtResource("2_7vx1u")]
+position = Vector2(175, -200)
+
+[node name="SouthLight" parent="TrafficLights" unique_id=867010446 instance=ExtResource("2_7vx1u")]
+position = Vector2(-175, 200)
+
+[node name="EastLight" parent="TrafficLights" unique_id=1091788834 instance=ExtResource("2_7vx1u")]
+position = Vector2(210, 175)
+rotation = -1.5707964
+
+[node name="WestLight" parent="TrafficLights" unique_id=661219214 instance=ExtResource("2_7vx1u")]
+position = Vector2(-210, -175)
+rotation = 1.5707964
+
+[node name="Cars" type="Node2D" parent="." unique_id=220827202]
+z_index = 5
+
+[node name="TestCar" parent="Cars" unique_id=704355984 instance=ExtResource("3_3m4wh")]
+z_index = 5
+position = Vector2(0, -800)

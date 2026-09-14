@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://be7k5ypbb0km0"]
+
+[ext_resource type="PackedScene" uid="uid://cdk0sx6m1cf1h" path="res://Scenes/Roads/intersection.tscn" id="1_1r6ip"]
+[ext_resource type="Script" uid="uid://dm1xnwygnx1oh" path="res://Scenes/Main/Main.gd" id="1_lixft"]
+
+[node name="Main" type="Node2D" unique_id=1906030226]
+show_behind_parent = true
+script = ExtResource("1_lixft")
+
+[node name="Intersection" parent="." unique_id=844715326 instance=ExtResource("1_1r6ip")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1979465692]
+zoom = Vector2(0.7, 0.7)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1635536193]
+
+[node name="TrafficInfo" type="Label" parent="CanvasLayer" unique_id=1726154635]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 43.0

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://6fgj1cdghbhu"]
+
+[ext_resource type="Script" uid="uid://duxva0e7my4j1" path="res://Scripts/Traffic_Lights/TrafficLight.gd" id="1_48h85"]
+
+[node name="TrafficLight" type="Node2D" unique_id=1311438655]
+z_index = 10
+script = ExtResource("1_48h85")
+
+[node name="RedLight" type="Polygon2D" parent="." unique_id=1631935500]
+position = Vector2(0, -35)
+color = Color(0.61960787, 0.03137255, 0.15686275, 1)
+polygon = PackedVector2Array(-12, -12, 0, -17, 12, -12, 17, 0, 12, 12, 0, 17, -12, 12, -17, 0)
+
+[node name="YellowLight" type="Polygon2D" parent="." unique_id=1013586339]
+color = Color(0.9149653, 0.7734292, 0.21356893, 1)
+polygon = PackedVector2Array(-12, -12, 0, -17, 12, -12, 17, 0, 12, 12, 0, 17, -12, 12, -17, 0)
+
+[node name="GreenLight" type="Polygon2D" parent="." unique_id=634090071]
+position = Vector2(0, 35)
+color = Color(0.25454333, 0.6613557, 1.92523e-07, 1)
+polygon = PackedVector2Array(-12, -12, 0, -17, 12, -12, 17, 0, 12, 12, 0, 17, -12, 12, -17, 0)
+
+[node name="Body" type="Polygon2D" parent="." unique_id=332065858]
+show_behind_parent = true
+color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+polygon = PackedVector2Array(-25, -60, 25, -60, 25, 60, -25, 60)

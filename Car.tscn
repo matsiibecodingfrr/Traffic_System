@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c5p5vsivf8ws4"]
+
+[ext_resource type="Script" uid="uid://uq0c2d24v46k" path="res://Scripts/Cars/Car.gd" id="1_f56yi"]
+[ext_resource type="Texture2D" uid="uid://c65wr5u1p51rn" path="res://Assets/Cars/car.png" id="2_a8e4n"]
+
+[node name="Car" type="CharacterBody2D" unique_id=704355984]
+script = ExtResource("1_f56yi")
+
+[node name="CarSprite" type="Sprite2D" parent="." unique_id=1197745936]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_a8e4n")
